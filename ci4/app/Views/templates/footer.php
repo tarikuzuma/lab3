@@ -42,16 +42,16 @@
         Applications
         </div>
         <div class = "col">
-        LinkedIn
+            <a href="https://www.linkedin.com/in/edwin-gumba-jr-1909771b1/">LinkedIn</a>
         </div>
         <div class = "col">
-        GitHub
+            <a href="https://github.com/tarikuzuma">GitHub</a>
         </div>
         <div class = "col">
         Discord
         </div>
         <div class = "col">
-        Vlogs
+            <a href="https://infosec.exchange/@tarikuzuma">Vlogs</a>
         </div>
     </div>
 

@@ -10,3 +10,6 @@ $routes->get('news/(:segment)', [News::class, 'show']);
 
 $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'view']);
+
+$routes->get('pages', [Pages::class, 'projects']);
+$routes->get('(:segment)', [Pages::class, 'view']);

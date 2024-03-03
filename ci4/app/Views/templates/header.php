@@ -1,9 +1,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Home</title>
+    <title><?= $title ?></title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type = "text/css" href = "css/cursor.css">
+    <link rel = "stylesheet" type = "text/css" href = "css/projects.css"> 
+    <link rel = "stylesheet" type = "text/css" href = "css/style.css"> 
     <script defer src = "js/app.js"></script>
 
     <!-- Connect to LastFM API -->
@@ -19,7 +21,7 @@
       <nav class = "navigation">
         <div id="navbar">
           <a href="home">Home</a>
-          <a href="projects.php">Projects</a>
+          <a href="projects">Projects</a>
           <a href="hobbies.php">Hobbies</a>
           <a href="contact.php">Contact</a>
         </div>
