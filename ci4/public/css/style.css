@@ -1,0 +1,550 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-Regular.ttf') format('truetype'),
+         url('/fonts/Poppins-Bold.ttf') format('truetype'),
+         url('/fonts/Poppins-Italic.ttf') format('truetype'),
+         url('/fonts/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}  
+
+/* Apply Poppins font to the body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #4f7b66;
+}
+
+
+header.nav_main {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 500px;
+    padding: 0 var(--16px);
+    margin-top: 15px;
+    background-color: transparent; 
+    transition: background-color 0.3s; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 54px;
+}
+
+nav.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: var(--20px) auto 0;
+    position: relative;
+    z-index: 100;
+}
+  
+  /* Style the navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+}
+
+/* Appear when scroll is enouugh for nav bar*/
+.greenBackground {
+    background-color: #203a30 !important;
+    opacity: 55%;
+    border-radius: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease; /* Add this to smooth the transition */
+}
+
+#navbar a:hover {
+    background: #79e19c;
+    border-radius: 54px;
+    position: relative;
+    transition: all 0.5s ease; /* Add this to smooth the transition */
+  }
+
+
+/* For smaller screens, adjust the width */
+@media (max-width: 768px) {
+    header.nav_main {
+        width: 90%; /* Adjust the width for smaller screens */
+    }
+}
+
+/* For cellphones or narrower screens */
+@media (max-width: 480px) {
+    header.nav_main {
+        width: 95%; /* Adjust width specifically for cellphones */
+    }
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    
+}
+
+footer {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    color: white;
+}
+
+.custom-navbar {
+    background-color: #00d4ff;
+}
+
+/* Animations */
+.hidden { 
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hidden2{
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateX(-100%);
+    transition: all 1s;
+} 
+
+.visible {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.visible2{
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+    transition: all 1s;
+}
+
+.main_top {
+    padding-bottom: 1in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: colorshift 20s infinite;
+    height: 100vh;
+}
+
+.main_top .press a {
+    text-decoration: none;
+    color: white; 
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.main_top .text {
+    font-size: 50px;
+    font-weight: 700;
+    display: flex;  
+    flex-wrap: wrap;
+}
+
+.main_top .typewriter{
+
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(20, end),
+      blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+}
+@keyframes colorshift {
+    10% {color: black}
+    20% {color: #003220;}
+    30% {color: #94bb8b;}
+    40% {color: #7ca876;}
+    50% {color: #bfdcae;}
+    60% {color: #94bb8b;}
+    70% {color: #abc072;}
+}
+
+/*Main Info*/
+.main_info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px; /* Set maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding to the container */
+    box-sizing: border-box; /* Include padding in the width */
+    /*background-color: #234138;*/
+    border-radius: 50px;
+  }
+  
+.main_info .left {
+    width: 100%;
+    position: relative;
+    padding-right: 10%;
+    width: fit-content;
+    height: fit-content;
+    display: inline-block; 
+    /* background-color: #f0f0f0;  Optional: Just to show the container */
+  }
+
+.image_main img {
+    width: 389px;
+    height: 389px;
+    border-radius: 50%; /* Set a border-radius to create a circular image */
+    object-fit: cover; /* Maintain the image's aspect ratio and cover the entire space */
+    margin-bottom: 40px; /* Add spacing aka Margin */
+}
+
+/* Spotify CSS */
+.spotify {
+    width: 400px;
+    height:auto;
+    position: relative;
+    background: #79E19C;
+    border-radius: 54px; 
+}
+
+.spotify .container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+
+.spotify .container .image {
+    margin-top: 14px;
+    margin-left: 8%;
+    margin-right: 5%;
+}
+
+.spotify img{
+    width: 88px;
+    height: 88px;
+}
+
+/*215 Max Width if Possible.*/
+.spotify .texts {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-right: 10px;
+}
+
+.spotify .now {
+    color: white;
+    font-size: x-large;
+    margin-top: 10px;
+    margin-bottom: -5px;
+    align-items: center;
+    text-align: center;
+}
+
+#song_title {
+    color: black;
+    font-size: x-large;
+    word-wrap: break-word;
+    margin-bottom: -5px;
+}
+
+#song_author{
+    color: #8582d7;
+    font-size: x-large;
+}
+
+
+#most_played_song {
+    color: black;
+    font-size: x-large !important;
+    word-wrap: break-word;
+    margin-bottom: -5px;
+}
+
+#most_played_author {
+    color: #8582d7;
+    font-size: x-large !important;
+}
+
+
+/*CSS of right side*/
+
+.main_info .right{
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+}
+
+.title_main {
+    font-size: 40px;
+    font-weight: 700; 
+    word-wrap: break-word;
+}
+
+.job_title {
+    color: #79E19C; 
+}
+
+
+.main_info .about{
+    color: white;
+    font-size: 28px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.main_info .tags {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+}
+
+.main_info .attributes{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; /* Center the items horizontally */
+}
+
+/* Tags CSS */
+.attributes .tag {
+    border-radius: 54px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 400;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 50%; /* Set a maximum width for tags */
+    width: auto; /* Allow tags to adjust their width */
+    padding-left: 15px; /* Add padding for better visibility */
+    padding-right: 15px;
+}
+
+.tag1 {
+    background: #B2B0FF;
+    width: 224px;
+    height: 83px;
+}
+
+.tag2 {
+    background: #FDD480;
+    width: 224px; 
+    height: 83px;
+}
+
+.tag3 {
+    background: #FAB3E6;
+    width: 224px;
+    height: 83px;
+}
+
+/* Adds animation to Tags CSS*/
+
+.tag:nth-child(1){
+    transition-delay: 200ms;
+}
+
+.tag:nth-child(2){
+    transition-delay: 400ms;
+}
+
+.tag:nth-child(3){
+    transition-delay: 600ms;
+}
+
+/* Workspae Philosophy */
+
+.workspace_philosophy{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    text-justify: inter-word;
+    background: #b7f5d4;
+    margin-top: 1.5in;
+}
+
+.workspace_philosophy .container {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
+
+.workspace_philosophy .title_main {
+    font-size: 50px;
+    font-weight: 700; 
+    word-wrap: break-word;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.text_main{
+    color: black;
+    font-size: 25px;
+}
+
+/* Circles WOAH! */
+
+.workspace_philosophy .tags {
+    margin: 3% 10% 4% 10%; /*Top right bottom left*/
+}
+
+.tags .circle {
+    width: 467px;
+    height: 133px;
+    border-radius: 54px;
+    background-color: #79e19c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 44px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.tags .first {
+    justify-content: flex-start; /* Align content to the right */
+    align-items: flex-start; /* Align content to the right */
+    margin-right: auto;
+}
+
+.tags .second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tags .third {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align content to the right */
+    align-items: flex-end; /* Align content to the right */
+    margin-left: auto;
+}
+
+
+/*Table Info Div class*/
+.table_info {
+    width: auto;
+    height: auto; /* Allow height to adjust according to content */
+    background: #b7f5d4;
+    border-radius: 81px;
+    padding: 7% 5% 8% 5%;
+
+}
+
+.row {
+  display: flex; /* Use flexbox for columns */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-around; /* Space evenly between columns */
+}
+
+.row > * {
+    margin: 20px 65px; 
+}
+
+.main_col {
+    padding: 10px 50px 10px 50px; 
+    box-sizing: border-box; 
+    /*background-color: #7f3b3b; Background color for demonstration */
+    display: grid;
+}
+
+.main_col .number {
+    width: 394px;
+    box-sizing: border-box; /* Include padding in the width */
+    /*background-color: #f2f2f2; /* Background color for demonstration */
+    margin-bottom: 20px; /* Add margin between rows */
+    font-size:64px;
+    font-weight:700;
+}
+
+.main_col .title {
+    width: 394px;
+    box-sizing: border-box; /* Include padding in the width */
+    /*background-color: #f2f2f2; /* Background color for demonstration */
+    margin-bottom: 20px; /* Add margin between rows */
+    font-size:36px;
+    font-weight:700;
+}
+
+.main_col .description {
+    width: 394px;
+    font-size:36px;
+    font-weight:400;
+}
+
+.col {
+    margin-top: 15px;
+}
+
+.col:first-child {
+    margin-top: 0;
+  }
+
+hr.line {
+    width: 63%;
+    border: none;
+    border-top: 1px solid black;
+    margin-top: 1in
+
+}
+
+
+
+
+@media (max-width: 767px) {
+  /* On smaller screens, make columns take up 100% width */
+  .column {
+    flex: 0 0 100%;
+  }
+}
+
+/* Adjust the styles for smaller screens */
+@media (max-width: 767px) {
+    .main_info .attributes {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center the items vertically */
+    }
+    
+    .attributes .tag {
+        margin: 10px 0; /* Add vertical spacing between tags */
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .table_info {
+        /* Adjust width and other properties for smaller screens */
+        max-width: 100%; /* Set to 100% to allow full responsiveness */
+        border-radius: 30px; /* Modify border-radius for smaller screens if needed */
+        /* Any other modifications needed for smaller screens */
+        
+    }
+}
