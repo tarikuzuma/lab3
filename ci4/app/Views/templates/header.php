@@ -22,7 +22,7 @@
         <div id="navbar">
           <a href="home">Home</a>
           <a href="projects">Projects</a>
-          <a href="hobbies.php">Hobbies</a>
+          <a href="hobbies">Hobbies</a>
           <a href="contact.php">Contact</a>
         </div>
       </nav>
