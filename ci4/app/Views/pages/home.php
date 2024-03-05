@@ -159,10 +159,10 @@
                 03
               </div>
               <div class ="title">
-                Think it? Make it!
+                Collaborative Spirit
               </div>
               <div class = "description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                Collaborattion and enhanced knowledge in git.
               </div>
             </div>
 
@@ -171,10 +171,10 @@
                 04
               </div>
               <div class ="title">
-                Agile is Key!
+                Time Bounded
               </div>
               <div class = "description">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit
+                If given enough time, everything is achievable.
               </div>
             </div>
           </div>
