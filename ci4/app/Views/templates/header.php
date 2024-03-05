@@ -6,6 +6,7 @@
     <link rel="stylesheet" type = "text/css" href = "css/cursor.css">
     <link rel = "stylesheet" type = "text/css" href = "css/projects.css"> 
     <link rel = "stylesheet" type = "text/css" href = "css/style.css"> 
+    <link rel="stylesheet" type = "text/css" href = "css/contact_cards.css">
     <script defer src = "js/app.js"></script>
 
     <!-- Connect to LastFM API -->
@@ -23,7 +24,7 @@
           <a href="home">Home</a>
           <a href="projects">Projects</a>
           <a href="hobbies">Hobbies</a>
-          <a href="contact.php">Contact</a>
+          <a href="contact">Contact</a>
         </div>
       </nav>
     </header>
