@@ -23,4 +23,10 @@ class Pages extends BaseController
             . view('pages/' . $page)
             . view('templates/footer');
     }
+
+    public function contact()
+    {
+        $data['title'] = 'Guest Forms'; // Define the title variable
+        return view('templates/header', $data) . view('pages/contact') . view('templates/footer');
+    }
 }
