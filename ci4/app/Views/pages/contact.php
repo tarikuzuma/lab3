@@ -76,3 +76,268 @@
           </div>
         </div>
       </section>
+
+    <div class="comments_section">
+
+        <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "webprogss221";
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                throw new Exception("Connection failed: " . $conn->connect_error);
+            }
+
+            // Perform a SQL query to count the total number of comments
+            $sql = "SELECT COUNT(*) AS total_comments FROM edgumba_myguest";
+            $result = mysqli_query($conn, $sql);
+
+            if ($result) {
+                // Fetch the result as an associative array
+                $row = mysqli_fetch_assoc($result);
+                
+                // Access the total_comments value from the array
+                $total_comments = $row['total_comments'];
+                $total_comments++; // Increment + 1 to the total comments since John Doe place holder.
+                // Output the total number of comments
+                echo "<div class='title_main'>
+                        <div>Guest Comments!
+                        <span class='total_comments'><br>&nbsp Total number: $total_comments</span>
+                        </div>
+                    </div>";
+            } else {
+                echo "Error: " . mysqli_error($conn);
+            }
+
+            // Close the database connection
+            mysqli_close($conn);
+            ?>
+
+            <div class="comment_form" style = "display: row;">
+                <form method="post" action="" enctype="multipart/form-data">
+                    <div class="image_container">
+                        <label for = "input-file"><img id="profile-image" src="https://picsum.photos/536/354" class="rounded_image"></label>
+                        <input class="hide" type="file" accept="image/jpeg, image/png, image/jpg" name="input_file" id="input-file">
+                    </div>
+                    <div class="comment_container" style = "width: 100%; background-color: white;">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="Username" name="user_name" required class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="phonenumber">Phone Number (Optional):</label>
+                            <input type="text" id="mobileNumber" name="mobile_number" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment_text">Comment:</label>
+                            <textarea id="Comment" name="comment" required class="form-control comment_box"></textarea>
+                        </div>
+                        <button type="submit" name = "comment_submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <?php
+            $target_dir = "assets/comments_profiles/";
+            $uploadOk = 1;
+
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "webprogss221";
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+            // Check connection
+            if ($conn->connect_error) {
+                throw new Exception("Connection failed: " . $conn->connect_error);
+            }
+
+            // Perform a SQL query to count the total number of comments
+            $sql = "SELECT COUNT(*) AS total_comments FROM edgumba_myguest";
+            $result = mysqli_query($conn, $sql);
+
+            if ($result) {
+                // Fetch the result as an associative array
+                $row = mysqli_fetch_assoc($result);
+                
+                // Access the total_comments value from the array
+                $total_comments = $row['total_comments'];
+                
+            } else {
+                echo "Error: " . mysqli_error($conn);
+            }
+
+            if(isset($_POST["comment_submit"])) {
+                if(isset($_FILES["input_file"]) && $_FILES["input_file"]["size"] > 0) {
+                    $target_file = $target_dir . basename($_FILES["input_file"]["name"]);
+                    $check = getimagesize($_FILES["input_file"]["tmp_name"]);
+                    if($check !== false) {
+                        $uploadOk = 0;
+                        if (move_uploaded_file($_FILES["input_file"]["tmp_name"], $target_file)) {
+                            $new_target_file = $target_dir . ($total_comments+1). ".png";
+                            rename($target_file, $new_target_file);
+                            echo "The file ". basename( $_FILES["input_file"]["name"]). " has been uploaded and renamed.";
+                        } else {
+                            echo "Sorry, there was an error uploading your file.";
+                            $uploadOk = 0;
+                        }
+                    } else {
+                        echo "File is not an image.";
+                        $uploadOk = 0;
+                    }
+                } else {
+                    echo "No file uploaded.";
+                    $uploadOk = 0;
+                }
+
+            mysqli_close($conn);
+
+                try {
+                    // PHP code to insert data to a database from the form
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "webprogss221";
+                    $conn = mysqli_connect($servername, $username, $password, $dbname);
+                    // Check connection
+                    if ($conn->connect_error) {
+                        throw new Exception("Connection failed: " . $conn->connect_error);
+                    }
+                    // Taking all 5 values from the form data(input)
+                    $user_name = $_REQUEST['user_name'];
+                    $mobile_number = $_REQUEST['mobile_number'];
+                    $comment = $_REQUEST['comment'];
+                    // We are going to insert the data into our sampleDB table
+                    $sql = "INSERT INTO edgumba_myguest VALUES (NULL, '$user_name', '$mobile_number', '$comment', CURRENT_TIMESTAMP)";
+                    // Check if the query is successful
+                    if(mysqli_query($conn, $sql)){
+                        echo "<h3>data stored in a database successfully."
+                            . " Please browse your localhost php my admin"
+                            . " to view the updated data</h3>";
+                        echo nl2br("\n$user_name\n $mobile_number\n "
+                            . "$comment\n");
+                    } else {
+                        throw new Exception("Error: Hush! Sorry $sql. " . mysqli_error($conn));
+                    }
+                } catch (Exception $e) {
+                    echo "Error: " . $e->getMessage();
+                } finally {
+                    // Close connection
+                    if (isset($conn)) {
+                        $conn->close();
+                    }
+                }
+                // Move redirect and exit before any output
+                if ($uploadOk || !isset($_FILES["input_file"])) {
+                    header("Location: contact.php");
+                    exit(); // Exit after setting the header
+                }
+            }
+            ?>
+            <?php
+                try {
+                    $servername = "localhost";
+                    $username = "root";
+                    $password = "";
+                    $dbname = "webprogss221";
+
+                    // $servername = "localhost";
+                    // $username = "webprogss221";
+                    // $password = "=latHen97";
+                    // $dbname = "webprogss221";
+
+                    // Create connection
+                    $conn = new mysqli($servername, $username, $password, $dbname);
+
+                    // Check connection
+                    if ($conn->connect_error) {
+                        throw new Exception("Connection failed: " . $conn->connect_error);
+                    }
+
+                    // SQL Query to Get Comment Details
+                    $commentDetailsSql = "SELECT * FROM edgumba_myguest  ORDER BY date_posted DESC";
+                    $commentDetailsResult = $conn->query($commentDetailsSql);
+
+                    // Check if there are results
+                    if ($commentDetailsResult->num_rows > 0) {
+                        // Loop through each comment
+                        while ($row = $commentDetailsResult->fetch_assoc()) {
+                            $user_id = $row["user_id"];
+                ?>
+                            <div class="comment"> 
+                                <div class="image_container">
+                                    <?php
+                                    // Construct the image path based on user ID
+                                    $image_path = "assets/comments_profiles/{$user_id}.png";
+                                    // Check if the image file exists
+                                    if (file_exists($image_path)) {
+                                        echo "<img src=\"$image_path\" class=\"rounded_image\">";
+                                    } else {
+                                        // If no image is found, display a default image
+                                        echo "<img src=\"https://picsum.photos/536/354\" class=\"rounded_image\">";
+                                    }
+                                    ?>
+                                </div>
+                                <div class="comment_container">
+                                    <div class="username">
+                                        <?php echo $row["user_name"]; ?>
+                                    </div>
+                                    <div class="time_posted">
+                                        <?php echo $row["date_posted"]; ?>
+                                    </div>
+                                    <div class="comment_text">
+                                        <?php echo $row["comment"]; ?>
+                                    </div>
+                                </div>
+                            </div>
+                <?php
+                        }
+                    } else {
+                        echo "0 results for comment details or you didnt make a table did ya?!";
+                    }
+                } catch (Exception $e) {
+                    echo "Error: " . $e->getMessage();
+                } finally {
+                    // Close the database connection
+                    if (isset($conn)) {
+                        $conn->close();
+                    }
+                }
+                ?>
+
+        <div class="comment">
+            <div class="image_container">
+                <img src="https://picsum.photos/536/354" class = "rounded_image">
+            </div>
+            <div class="comment_container">
+                <div class="username">
+                    John Doe
+                </div>
+                <div class="time_posted">
+                    February 2, 2024
+                </div>
+                <div class="comment_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+                molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+                numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+                optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
+                obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
+                nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
+                tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+                quia. Quo neque error repudiandae fuga? Ipsa laudantium molestias eos 
+                sapiente officiis modi at sunt excepturi expedita sint? Sed quibusdam
+                recusandae alias error harum maxime adipisci amet laborum. Perspiciatis 
+                minima nesciunt dolorem! Officiis iure rerum voluptates a cumque velit 
+                quibusdam sed amet tempora. Sit laborum ab, eius fugit doloribus tenetur 
+                fugiat, temporibus enim commodi iusto libero magni deleniti quod quam 
+                consequuntur!
+                </div>
+            </div>
+        </div> 
+
+        <div class = "title_main" style = "margin-top: 30px;">
+            - End of Comments -        
+        </div>
+
+    </div>
