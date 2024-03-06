@@ -46,6 +46,12 @@
             animation-fill-mode: forwards; /* Keep styles after animation completes */
         }
 
+        .card svg {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto;
+        }
+
     </style>
 </head>
 <body>

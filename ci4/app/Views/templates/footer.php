@@ -1,3 +1,27 @@
+    <style>
+        /* Custom CSS to style links in the footer */
+        footer a {
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Inherit color from parent */
+            position: relative; /* Ensure relative positioning for pseudo-element */
+        }
+
+        footer a::after {
+            content: ""; /* Add pseudo-element */
+            position: absolute; /* Position the pseudo-element */
+            bottom: 0; /* Adjust as needed */
+            left: 0; /* Adjust as needed */
+            width: 0%; /* Initially no width */
+            height: 3px; /* Height of the underline */
+            background-color: white; /* Color of the underline */
+            transition: all 0.5s; /* Smooth transition effect */
+        }
+
+        footer a:hover::after {
+            width: 100%; /* Expand the width of the underline on hover */
+        }
+    </style>
+    
     <footer style = "margin-top: 100px; margin-bottom: 50px;">
 
     <div class = "row">
