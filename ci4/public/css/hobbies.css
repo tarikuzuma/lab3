@@ -14,6 +14,7 @@
     animation: colorshift 20s infinite;
 }
 
+/* Cards */
 .cards_hobbies {
     display: flex;
     flex-wrap: wrap;

@@ -1,15 +1,28 @@
 .gallery{
-    width: 100%;
+    width: 90%;
     height: auto;
     text-align: center;
     margin: auto;
 }
+
 .gallery img{
     width: 500px;
     height:auto;
     transition: 0.5s;
-    margin: 20px;
+    margin: 7px;
+    max-width:300px;
+    max-height:450px;
 }
+
+.framed {
+    display: inline-block;
+    border: 5px solid #ddd; /* Adjust border color and thickness as desired */
+    text-decoration: none; /* Remove default underline */
+    color: #333; /* Set text color */
+    margin-bottom: 30px;
+    margin-right: 20px;
+}
+
 .gallery img:hover{
     filter: grayscale(80%);
     transform: scale(1.02);

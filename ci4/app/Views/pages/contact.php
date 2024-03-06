@@ -1,4 +1,4 @@
-<section class="hidden">
+<section class="hidden" style = "margin-bottom: -1in">
         <div class="main_top" style="height: 75vh;">
             <div class="text" style="font-size: 200px;">
                 <span class="drop_word">Contacts</span>
