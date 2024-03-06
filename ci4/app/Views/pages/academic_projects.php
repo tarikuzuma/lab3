@@ -4,7 +4,8 @@
                 <span class="drop_word">Academic Projects</span>
             </div>
             <div class="sub_text drop_word delayed_drop_word">
-                Compiled Major Projects from my Academic Life.
+                Compiled Major Projects from my Academic Life.<br>
+                (Incomplete Section)
             </div>
         </div>
       </section>

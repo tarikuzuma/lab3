@@ -5,7 +5,8 @@
                 <span class="drop_word">Personal Projects</span>
             </div>
             <div class="sub_text drop_word delayed_drop_word">
-                Projects that fix inconeviences in my life, or perhaps just to practice programming.
+                Projects that fix inconeviences in my life, or perhaps just to practice programming.<br>
+                (Incomplete Section, still working on it!)
             </div>
         </div>
       </section>

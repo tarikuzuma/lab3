@@ -48,8 +48,13 @@
             <a href="https://github.com/tarikuzuma">GitHub</a>
         </div>
         <div class = "col">
-        Discord
+            <a href = "#" onclick="openPopup()"> Discord </a>
         </div>
+        <script>
+            function openPopup() {
+                alert("Username: Tarikuzuma ; ID: 730250913196933160");
+            }
+        </script>
         <div class = "col">
             <a href="https://infosec.exchange/@tarikuzuma">Vlogs</a>
         </div>
@@ -59,8 +64,64 @@
         <div class = "col">
         Contact
         </div>
-        <div class = "col">
-        Emails
+        <div class="col">
+    <a href="#" onclick="openPopupEmail()"> Emails </a>
+    <div id="emailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePopupEmail()">&times;</span>
+            <p>Student Email: edgumba@student.apc.edu.ph</p>
+            <p>Work Email: edwinjrgumba@gmail.com</p>
+            <p>Personal Email: gumba_win@yahoo.com</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Styles for the modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: black;
+    }
+    .modal-content {
+        background-color: #b7f5d4;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+    }
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    function openPopupEmail() {
+        var modal = document.getElementById("emailModal");
+        modal.style.display = "block";
+    }
+
+    function closePopupEmail() {
+        var modal = document.getElementById("emailModal");
+        modal.style.display = "none";
+    }
+</script>
         </div>
     </div>
     </div>

@@ -10,12 +10,12 @@ $routes->get('news/new', [News::class, 'new']);
 $routes->post('news', [News::class, 'create']);     
 $routes->get('news/(:segment)', [News::class, 'show']); 
 
+$routes->get('contact', [Pages::class, 'contact']);
+$routes->post('contact', [Pages::class, 'contact']);
+
 $routes->get('pages', [Pages::class, 'index']);
 $routes->get('(:segment)', [Pages::class, 'view']);
 
-
-
-$routes->post('contact', [Pages::class, 'contact']);
 
 $routes->get('comment', [CommentController::class, 'index']);
 $routes->get('comment/count', [CommentController::class, 'count']);

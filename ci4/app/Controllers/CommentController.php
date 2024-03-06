@@ -40,39 +40,28 @@ class CommentController extends BaseController
 
     public function create()
     {
-        helper('form');
-
-        // Retrieve the validated data from the request
-        $data = $this->request->getPost(['user_name', 'mobile_number', 'comment']);
-
-        // Validate the submitted data
-        if (! $this->validate([
-            'user_name' => 'required|max_length[255]|min_length[3]',
-            'mobile_number' => 'required|max_length[20]',
-            'comment' => 'required|max_length[5000]|min_length[10]',
-        ])) {
-            // The validation fails, so return the form
-            return $this->new();
-        }
-
-        // Get the validated data
-        $commentData = $this->validator->getValidated();
-
-        // Create an instance of the CommentModel
         $model = model(CommentModel::class);
 
-        // Save the data to the database
-        $model->save([
-            'user_name' => $commentData['user_name'],
-            'mobile_number' => $commentData['mobile_number'],
-            'comment' => $commentData['comment'],
-            'date_posted' => date('Y-m-d H:i:s')
-        ]);
+        $user_name = $this->request->getPost('user_name');
+        $mobile_number = $this->request->getPost('mobile_number');
+        $comment = $this->request->getPost('comment');
 
-        // Display success message
-        return view('templates/header', ['title' => 'Createdd a comment'])
-            . view('comment/test')
-            . view('templates/footer');
+        $data = [
+            'user_name' => $user_name,
+            'mobile_number' => $mobile_number,
+            'comment' => $comment,
+            'date_posted' => date('Y-m-d H:i:s')
+        ];
+
+        if ($model->insert($data)) {
+            // Success: Data inserted
+            return view('templates/header', ['title' => 'Created a news item'])
+                . view('comment/test')
+                . view('templates/footer');
+        } else {
+            // Error: Failed to insert data
+            return redirect()->back()->with('error', 'Failed to submit comment.');
+        }
     }
 
     public function show($user_id = null)

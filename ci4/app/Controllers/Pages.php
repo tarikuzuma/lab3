@@ -10,6 +10,12 @@ class Pages extends BaseController
         return view('welcome_message');
     }
 
+    public function contact()
+    {
+        $data['title'] = 'Guest Forms'; // Define the title variable
+        return view('templates/header_contact', $data) . view('pages/contact') . view('templates/footer');
+    }
+
     public function view($page)
     {
         if (! is_file(APPPATH . 'Views/pages/' . $page . '.php')) {
@@ -24,9 +30,4 @@ class Pages extends BaseController
             . view('templates/footer');
     }
 
-    public function contact()
-    {
-        $data['title'] = 'Guest Forms'; // Define the title variable
-        return view('templates/header', $data) . view('pages/contact') . view('templates/footer');
-    }
 }
