@@ -5,8 +5,7 @@
             </div>
 
             <div class="sub_text drop_word delayed_drop_word">
-                Get to know me! <br>
-                "!Coming Soon!>
+                Get to know me!
             </div>
         </div>
     </section>

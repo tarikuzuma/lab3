@@ -3,6 +3,7 @@
     height: auto;
     text-align: center;
     margin: auto;
+    margin-top: 20px;
 }
 
 .gallery img{
@@ -12,15 +13,18 @@
     margin: 7px;
     max-width:300px;
     max-height:450px;
+    border-radius: 20px;
+
 }
 
 .framed {
     display: inline-block;
-    border: 5px solid #ddd; /* Adjust border color and thickness as desired */
+    border: 5px solid #545252; /* Adjust border color and thickness as desired */
     text-decoration: none; /* Remove default underline */
     color: #333; /* Set text color */
     margin-bottom: 30px;
     margin-right: 20px;
+    border-radius: 20px;
 }
 
 .gallery img:hover{

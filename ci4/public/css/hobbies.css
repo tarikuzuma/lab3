@@ -1,5 +1,28 @@
 /* Derived From contact_cards.css */
 
+.press a {
+    text-decoration: none;
+    color: rgb(80, 80, 80); 
+    font-size: 15px;
+    font-weight: 700;
+    position: relative;
+}
+
+.press a::after {
+    content: ""; /* Add pseudo-element */
+    position: absolute; /* Position the pseudo-element */
+    bottom: 0; /* Adjust as needed */
+    left: 0; /* Adjust as needed */
+    width: 0%; /* Initially no width */
+    height: 3px; /* Height of the underline */
+    background-color: rgb(66, 62, 62); /* Color of the underline */
+    transition: all 0.5s; /* Smooth transition effect */
+}
+
+.press a:hover::after {
+    width: 100%; /* Expand the width of the underline on hover */
+}
+
 .hobby_title {
     font-size: 50px;
     font-weight: 700;
@@ -12,6 +35,21 @@
     justify-content: center;
     align-items: center;
     animation: colorshift 20s infinite;
+}
+
+.hobby_table {
+    width: auto;
+    height: auto; /* Allow height to adjust according to content */
+    background: #b7f5d4;
+    border-radius: 81px;
+    padding: 3% 5% 2% 5%;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 1in;
+}
+
+.text-below {
+    text-align: center;
 }
 
 /* Cards */

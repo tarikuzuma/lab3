@@ -387,6 +387,18 @@ footer {
     margin-top: 1.5in;
 }
 
+.workspace_philosophy a {
+    text-decoration: none;
+    color: black;
+    /* Set initial size */
+    display: inline-block;
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.workspace_philosophy a:hover {
+    transform: scale(1.15); /* Increase size on hover */
+}
+
 .workspace_philosophy .container {
     padding-left: 20%;
     padding-right: 20%;

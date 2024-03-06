@@ -100,14 +100,18 @@
 
         <div class = "tags">
           <div class = "first">
-            <div class = "circle hidden2">
-              <b>8</b>&nbsp;Organizations
-            </div>
+            <a href = "https://www.linkedin.com/in/edwin-gumba-jr/details/organizations/">
+              <div class = "circle hidden2">
+                <b>8</b>&nbsp;Organizations
+              </div>
+             </a>
           </div>
           <div class ="second">
-            <div class = "circle hidden2">
-              <b>23 </b>&nbsp;Projects
-            </div>
+            <a href = "projects">
+              <div class = "circle hidden2">
+                <b>23 </b>&nbsp;Projects
+              </div>
+            </a>
           </div>
           <div class = "third hidden2">
             <div class = "circle" style = "font-size: 24px; padding-left: 20px; padding-right: 20px;">
