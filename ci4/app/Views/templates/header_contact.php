@@ -16,6 +16,37 @@
     <script type="text/javascript" src="js/last_fm/lastfm.api.js"></script>
     <script type="text/javascript" src="js/last_fm/lastfm.api.md5.js"></script>
     <script type="text/javascript" src="js/last_fm/last_fm_connector.js"></script>
+
+    <style>
+        .sub_text {
+            opacity: 0; /* Initially hide sub_text */
+            text-align: center;
+            font-size: 25px;
+            color: white;
+        }
+
+        @keyframes dropWord {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .drop_word {
+            display: inline-block;
+            animation: dropWord 1s ease-out;
+        }
+
+        .delayed_drop_word {
+            animation-delay: 1s; /* Longer delay for the second drop effect */
+            animation-fill-mode: forwards; /* Keep styles after animation completes */
+        }
+
+    </style>
 </head>
 <body>
 
@@ -23,10 +54,10 @@
     <header class = "nav_main">
       <nav class = "navigation">
         <div id="navbar">
-          <a href="home.php">Home</a>
-          <a href="projects.php">Projects</a>
-          <a href="hobbies.php">Hobbies</a>
-          <a href="contact.php">Contact</a>
+          <a href="home">Home</a>
+          <a href="projects">Projects</a>
+          <a href="hobbies">Hobbies</a>
+          <a href="contact">Contact</a>
         </div>
       </nav>
     </header>

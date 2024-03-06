@@ -7,7 +7,6 @@
     <link rel = "stylesheet" type = "text/css" href = "css/projects.css"> 
     <link rel = "stylesheet" type = "text/css" href = "css/style.css"> 
     <link rel="stylesheet" type = "text/css" href = "css/contact_cards.css">
-    <link rel="stylesheet" type="text/css" href="css/forms.css">
 
     <script defer src = "js/forms_validator.js"></script>
     <script defer src = "js/app.js"></script>
