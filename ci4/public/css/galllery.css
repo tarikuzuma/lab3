@@ -5,9 +5,10 @@
     margin: auto;
 }
 .gallery img{
-    width: 500px;
     height:auto;
     transition: 0.5s;
+    max-width: 500px;
+    max-height: 500px;
 }
 .gallery img:hover{
     filter: grayscale(80%);
