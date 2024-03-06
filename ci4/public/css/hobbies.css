@@ -1,0 +1,121 @@
+/* Derived From contact_cards.css */
+
+.hobby_title {
+    font-size: 50px;
+    font-weight: 700;
+    display: flex;  
+    flex-wrap: wrap;
+
+    padding-bottom: 1in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: colorshift 20s infinite;
+}
+
+.cards_hobbies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center cards horizontally */
+    gap: 10px; /* Adjust as needed to add space between cards */
+  }
+  
+.card_hobbies {
+    margin: 20px;
+    padding: 20px;
+    width: 350px;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 25px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+}
+
+.card_webdev {
+    margin: 20px;
+    padding: 20px;
+    max-width: 900px;
+    min-width: 380px;
+    min-height: 200px;
+    display: grid;
+    grid-template-rows: 20px 50px 1fr 50px;
+    border-radius: 25px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+  /* Transition of Gradiance */
+  .card-front-end {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  }
+  
+  
+  /* Transition of Gradiance */
+  .card-back-end {
+    background: linear-gradient(-45deg, #8993be, #3fbafe, #5e6f9e, #d0ab60, #dd8800);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  }
+
+
+
+.card-py {
+    background: radial-gradient(#60efbc, #58d5c9);
+}
+
+.card-cs {
+    background: radial-gradient(#1fe4f5, #3fbafe);
+    /*background: radial-gradient(#fbc1cc, #fa99b2);*/
+}
+
+.card-java{
+    background: radial-gradient(#F9E897, #FFC374);
+}
+
+.card-cpp{
+    background: radial-gradient(#659bd3, #004283);
+}
+
+.card-c{
+    background: radial-gradient(#659bd3, #00589d);
+}
+
+
+
+.card-html{
+    background: radial-gradient(#e96228, #dd4b25);
+}
+
+.card-css{
+    background: radial-gradient(#2862e9, #254bdd);
+}
+
+.card-js{
+    background: radial-gradient(#f7e018, #FFC374);
+}
+
+.card-php{
+    background: radial-gradient(#8993be, #5e6f9e);
+}
+
+.card-sql{
+    background: radial-gradient( #d0ab60, #dd8800);
+}

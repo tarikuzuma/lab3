@@ -6,7 +6,10 @@
     <link rel="stylesheet" type = "text/css" href = "css/cursor.css">
     <link rel = "stylesheet" type = "text/css" href = "css/projects.css"> 
     <link rel = "stylesheet" type = "text/css" href = "css/style.css"> 
+    <link rel = "stylesheet" type = "text/css" href = "css/hobbies.css">
+    <link rel="stylesheet" type = "text/css" href = "css/contact_cards.css">
 
+    <script defer src = "js/forms_validator.js"></script>
     <script defer src = "js/app.js"></script>
 
     <!-- Connect to LastFM API -->
@@ -14,6 +17,14 @@
     <script type="text/javascript" src="js/last_fm/lastfm.api.js"></script>
     <script type="text/javascript" src="js/last_fm/lastfm.api.md5.js"></script>
     <script type="text/javascript" src="js/last_fm/last_fm_connector.js"></script>
+
+    <style>
+        .card_hobbies svg {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
 

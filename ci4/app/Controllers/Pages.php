@@ -16,6 +16,16 @@ class Pages extends BaseController
         return view('templates/header_contact', $data) . view('pages/contact') . view('templates/footer');
     }
 
+    public function hobbies()
+    {
+        $data['title'] = 'Hobbies'; // Define the title variable
+        return view('templates/header_hobbies', $data) 
+            . view('pages/hobbies/hero')
+            . view('pages/hobbies/softdev')
+            . view('pages/hobbies/webdev')
+            . view('templates/footer');
+    }
+
     public function view($page)
     {
         if (! is_file(APPPATH . 'Views/pages/' . $page . '.php')) {

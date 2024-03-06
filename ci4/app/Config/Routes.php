@@ -10,6 +10,8 @@ $routes->get('news/new', [News::class, 'new']);
 $routes->post('news', [News::class, 'create']);     
 $routes->get('news/(:segment)', [News::class, 'show']); 
 
+$routes->get('hobbies', [Pages::class, 'hobbies']);
+
 $routes->get('contact', [Pages::class, 'contact']);
 $routes->post('contact', [Pages::class, 'contact']);
 
