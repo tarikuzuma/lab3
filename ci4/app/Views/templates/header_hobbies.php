@@ -6,11 +6,14 @@
     <link rel="stylesheet" type = "text/css" href = "css/cursor.css">
     <link rel = "stylesheet" type = "text/css" href = "css/projects.css"> 
     <link rel = "stylesheet" type = "text/css" href = "css/style.css"> 
+
     <link rel = "stylesheet" type = "text/css" href = "css/hobbies.css">
     <link rel="stylesheet" type = "text/css" href = "css/contact_cards.css">
+    <link rel="stylesheet" type = "text/css" href = "css/lightbox.min.css">
+    <link rel="stylesheet" type = "text/css" href = "css/gallery.css">
 
-    <script defer src = "js/forms_validator.js"></script>
     <script defer src = "js/app.js"></script>
+    <script defer src = "js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
 
     <!-- Connect to LastFM API -->
     <script type="text/javascript" src="js/last_fm/lastfm.api.cache.js"></script>

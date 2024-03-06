@@ -21,6 +21,8 @@ class Pages extends BaseController
         $data['title'] = 'Hobbies'; // Define the title variable
         return view('templates/header_hobbies', $data) 
             . view('pages/hobbies/hero')
+            . view('pages/hobbies/core_hobbies')
+            . view('pages/hobbies/soft_hobbies')
             . view('pages/hobbies/softdev')
             . view('pages/hobbies/webdev')
             . view('templates/footer');
