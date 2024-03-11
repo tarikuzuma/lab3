@@ -76,6 +76,6 @@
     </div>
 
     <div calss ="text_main">
-        <p> Fetching Last FM data won't work in the SocIT cloud </p>
+        <p> Fetching Last FM data won't work in the SoCIT cloud </p>
     </div>
 </section>

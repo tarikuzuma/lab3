@@ -86,9 +86,9 @@
 
         <?php
             $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "webprogss221";
+            $username = "WEBPROGT220232024";
+            $password = "goo)Story59";
+            $dbname = "WEBPROGT220232024";
             $conn = mysqli_connect($servername, $username, $password, $dbname);
             // Check connection
             if ($conn->connect_error) {
@@ -149,9 +149,9 @@
             $uploadOk = 1;
 
             $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "webprogss221";
+            $username = "WEBPROGT220232024";
+            $password = "goo)Story59";
+            $dbname = "WEBPROGT220232024";
             $conn = mysqli_connect($servername, $username, $password, $dbname);
             // Check connection
             if ($conn->connect_error) {
@@ -201,9 +201,9 @@
                 try {
                     // PHP code to insert data to a database from the form
                     $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "webprogss221";
+                    $username = "WEBPROGT220232024";
+                    $password = "goo)Story59";
+                    $dbname = "WEBPROGT220232024";
                     $conn = mysqli_connect($servername, $username, $password, $dbname);
                     // Check connection
                     if ($conn->connect_error) {
@@ -243,15 +243,15 @@
             <?php
                 try {
                     $servername = "localhost";
-                    $username = "root";
-                    $password = "";
-                    $dbname = "webprogss221";
+                    $username = "WEBPROGT220232024";
+                    $password = "goo)Story59";
+                    $dbname = "WEBPROGT220232024";
 
                     // $servername = "localhost";
-                    // $username = "webprogss221";
-                    // $password = "=latHen97";
+                    // $username = "root";
+                    // $password = "";
                     // $dbname = "webprogss221";
-
+                    
                     // Create connection
                     $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -354,7 +354,7 @@
                     <li>The current image saver is purely a renaming tool. 
                     It doesn't actually store the image data securely, like a BLOB 
                     or in a database. This means the saved images are fragile and lack proper management.
-                Also uploading images wont work in the SocIT Cloud</li>
+                Also uploading images wont work in the SoCIT Cloud</li>
                 </ul>
             </div>
         </div>
