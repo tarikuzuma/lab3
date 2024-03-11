@@ -344,5 +344,17 @@
         <div class = "title_main" style = "margin-top: 30px;">
             - End of Comments -        
         </div>
-
+        <div style = "width: 600px">
+            <div class = "text_main">
+                Guest Form Problems
+                <ul>
+                    <li>Cannot Handle Concurent Users</li>
+                    <li>Cannot handle Apostrophes</li>
+                    <li>Haven't really tested with other special characters</li>
+                    <li>The current image saver is purely a renaming tool. 
+                    It doesn't actually store the image data securely, like a BLOB 
+                    or in a database. This means the saved images are fragile and lack proper management.</li>
+                </ul>
+            </div>
+        </div>
     </div>
