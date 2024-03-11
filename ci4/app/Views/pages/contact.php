@@ -353,7 +353,8 @@
                     <li>Haven't really tested with other special characters</li>
                     <li>The current image saver is purely a renaming tool. 
                     It doesn't actually store the image data securely, like a BLOB 
-                    or in a database. This means the saved images are fragile and lack proper management.</li>
+                    or in a database. This means the saved images are fragile and lack proper management.
+                Also uploading images wont work in the SocIT Cloud</li>
                 </ul>
             </div>
         </div>

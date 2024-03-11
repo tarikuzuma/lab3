@@ -55,23 +55,27 @@
     </div>
 
     <div class = "spotify">
-            <div class = "container">
-              <div class = "image">
-                <img src="assets/spotify.png">
-              </div>
-                <div class = "texts">
-                  <div class = "now">
-                    Now Listening to:
-                  </div>
-                  <div id = "song_title">
-                    <!-- Temporary-->
-                    Daughter of a Cop
-                  </div>
-                  <div id = "song_author">
-                    <!-- Temporary-->
-                    by TV Girl      
-                  </div>
+        <div class = "container">
+            <div class = "image">
+            <img src="assets/spotify.png">
+            </div>
+            <div class = "texts">
+                <div class = "now">
+                Now Listening to:
+                </div>
+                <div id = "song_title">
+                <!-- Temporary-->
+                Daughter of a Cop
+                </div>
+                <div id = "song_author">
+                <!-- Temporary-->
+                by TV Girl      
                 </div>
             </div>
-          </div>
+        </div>
+    </div>
+
+    <div calss ="text_main">
+        <p> Fetching Last FM data won't work in the SocIT cloud </p>
+    </div>
 </section>
